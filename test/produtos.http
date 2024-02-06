@@ -1,0 +1,21 @@
+//Buscar Produtos.
+GET http://[::1]:5005/produto
+
+###
+
+POST http://[::1]:5005/produto
+Content-Type: application/json
+
+//o Objeto JSON tem na CHAVE as "" obrigatoriamente. EX "Name": "Exemplo"
+{
+    "id":234,
+    "nome":"Produto 2",
+    "preco":350,
+    "off": 17
+    
+}
+
+###
+
+//Buscar Produto por ID
+GET  http://[::1]:5005/produto/123
