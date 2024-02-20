@@ -8,7 +8,7 @@ Content-Type: application/json
 
 //o Objeto JSON tem na CHAVE as "" obrigatoriamente. EX "Name": "Exemplo"
 {
-    "id":234,
+    "id":2365,
     "nome":"Produto 2",
     "preco":350,
     "off": 17
@@ -18,4 +18,19 @@ Content-Type: application/json
 ###
 
 //Buscar Produto por ID
-GET  http://[::1]:5005/produto/123
+GET  http://[::1]:5005/produto/2365
+
+
+###
+PATCH http://[::1]:5005/produto/2365
+Content-Type: application/json
+
+{
+    
+    "nome":"Produto 5"
+    
+}
+
+
+###
+DELETE http://[::1]:5005/produto/2365 HTTP/1.1

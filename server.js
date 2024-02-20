@@ -13,9 +13,13 @@ fastify.get('/produto/:id', produtoService.buscarPorId )
 
 fastify.post('/produto', produtoService.criarProduto )
 
-fastify.patch('/produto/id/', produtoService.editarProdutoId)
+fastify.put('/produto/:id/', produtoService.editarProdutoId)
 
-fastify.delete('/produto/id/', produtoService.deletarProdutoId )
+fastify.patch('/produto/:id', produtoService.editarProdutoIdParcial)
+
+fastify.delete('/produto/:id', produtoService.deletarProdutoId )
+
+fastify.delete('/produto', produtoService.deletarTodos )
 
 fastify.listen({ port:PORT}, (err, address) => {
   if(err) throw err;
